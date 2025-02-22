@@ -10,7 +10,7 @@ async function runSemgrep() {
     document.getElementById("results").innerText = "Running scan...";
 
     try {
-        const response = await fetch("https://qd7nlu9vb4.execute-api.us-east-1.amazonaws.com/scan", {
+        const response = await fetch("https://hkqi7ors8g.execute-api.us-east-1.amazonaws.com/prod", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ code: code, rules: rules })

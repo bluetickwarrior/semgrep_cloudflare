@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semgrep Code Scanner</title>
+    <script defer src="script.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+        textarea { width: 100%; height: 200px; font-size: 14px; }
+        button { padding: 10px 15px; margin-top: 10px; cursor: pointer; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>Semgrep Code Scanner</h1>
+    <label for="codeInput">Paste your code here:</label>
+    <textarea id="codeInput" placeholder="Enter code to scan..."></textarea>
+    
+    <label for="ruleInput">Semgrep Ruleset (Optional):</label>
+    <input type="text" id="ruleInput" placeholder="e.g., p/security-audit" value="p/ci">
+
+    <button onclick="runSemgrep()">Run Scan</button>
+
+    <h2>Results:</h2>
+    <pre id="results">No results yet...</pre>
+</body>
+</html>

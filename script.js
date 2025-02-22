@@ -23,6 +23,7 @@ async function runSemgrep() {
         const data = await response.json();
         document.getElementById("results").innerText = JSON.stringify(data, null, 2);
     } catch (error) {
+        alert("fetch failed")
         document.getElementById("results").innerText = "Error: " + error.message;
     }
 }
